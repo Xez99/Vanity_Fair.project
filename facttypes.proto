@@ -1,0 +1,9 @@
+import "base.proto";
+import "facttypes_base.proto";
+
+message Relations: NFactType.TFact
+{
+	required string MainName = 1;
+	required string SecondName = 2;
+	required string RelationName = 3;
+}

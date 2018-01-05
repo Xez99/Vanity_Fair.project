@@ -1,0 +1,20 @@
+encoding "utf-8";
+
+TTextMinerConfig {
+  Dictionary = "dic.gzt";
+
+  Input = {File = "input.txt"}
+
+  Output = {File = "output.txt"
+              Format = text}
+
+  PrettyOutput = "PrettyOutput.html";
+
+  Articles = [
+          { Name = "RelationBetweenEntity"}
+          ]
+
+  Facts = [
+		{ Name = "Relations"}
+	    ]
+}
