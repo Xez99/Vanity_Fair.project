@@ -8,9 +8,9 @@ Person -> Word<kwtype=person, h-reg1, gc-agr[1]> Word<h-reg1, gc-agr[1]>;
 
 Trash -> Word | LBracket | RBracket | Comma | Colon;
 
-Relation -> Person interp(Relations.MainName) Trash* RelationWord interp(Relations.RelationName) Trash* Person interp(Relations.SecondName);
-Relation -> Person Trash* Word<kwtype=person, h-reg1> interp(Relations.MainName) Comma Trash* RelationWord interp(Relations.RelationName) Trash* Person interp(Relations.SecondName);
-Relation -> RelationWord interp(Relations.RelationName) Trash* Person interp(Relations.MainName) Trash* Person interp (Relations.SecondName);
-Relation -> RelationWord Trash* Person interp(Relations.MainName) Trash* RelationWord interp(Relations.RelationName) Trash* Person interp (Relations.SecondName);
-Relation -> Person interp(Relations.MainName) Trash* 'его' RelationWord interp(Relations.RelationName) Trash* Person interp(Relations.SecondName);
-Relation -> Person interp(Relations.MainName) Trash* RelationWord interp(Relations.RelationName) Trash* Word<kwtype=person, h-reg1> interp(Relations.SecondName);
+Relation -> Person interp(Relative.MainName) Trash* RelationWord interp(Relative.RelationName) Trash* Person interp(Relative.SecondName);
+Relation -> Person Trash* Person interp(Relative.MainName) Comma Trash* RelationWord interp(Relative.RelationName) Trash* Person interp(Relative.SecondName);
+Relation -> RelationWord interp(Relative.RelationName) Trash* Person interp(Relative.MainName) Trash* Person interp (Relative.SecondName);
+Relation -> RelationWord Trash* Person interp(Relative.MainName) Trash* RelationWord interp(Relative.RelationName) Trash* Person interp (Relative.SecondName);
+Relation -> Person interp(Relative.MainName) Trash* 'его' RelationWord interp(Relative.RelationName) Trash* Person interp(Relative.SecondName);
+Relation -> Person interp(Relative.MainName) Trash* RelationWord interp(Relative.RelationName) Trash* 'Миссис'<gc-agr[1]> Word<h-reg1, gc-agr[1]> interp(Relative.SecondName);
